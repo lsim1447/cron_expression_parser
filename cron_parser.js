@@ -127,3 +127,21 @@ function main() {
 }
 
 main();
+
+// Tests
+(function runTests() {
+  // expandField
+  assert.deepStrictEqual(expandField('hour', '0-2', 0, 23), [0, 1, 2]);
+  assert.deepStrictEqual(expandField('day of month', '1,15,30', 1, 31), [1, 15, 30]);
+  assert.deepStrictEqual(expandField('month', '*/2', 1, 12), [1, 3, 5, 7, 9, 11]);
+  assert.deepStrictEqual(expandField('day of week', '*/2', 0, 6), [0, 2, 4, 6]);
+
+  // parseCronExpression
+  const parsed = parseCronExpression('*/15 0 1,15 * 1-3 /usr/bin/find');
+  assert.deepStrictEqual(parsed.minute, [0, 15, 30, 45]);
+  assert.deepStrictEqual(parsed.hour, [0]);
+  assert.deepStrictEqual(parsed.dayOfMonth, [1, 15]);
+  assert.deepStrictEqual(parsed.month, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+  assert.deepStrictEqual(parsed.dayOfWeek, [1, 2, 3]);
+  assert.strictEqual(parsed.command, '/usr/bin/find');
+})();
