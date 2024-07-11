@@ -5,11 +5,20 @@ This Node.js script parses a cron expression and outputs the individual componen
 ## Installation
 
 ### Prerequisites: 
-Node.js installed on your system.
+Node.js installed on your system. You can download it here: https://nodejs.org/en/download/source-code
 
-## Usage
+You can clone the repository by executing the following git command, from your desired folder, in your terminal:
 
 ```bash
+git clone https://github.com/lsim1447/cron_expression_parser.git
+```
+
+## Usage
+After navigating into the project's folder, try to run the script.
+
+```bash
+cd cron_expression_parser
+
 node cron_parser.js '<cron_expression>'
 ```
 
