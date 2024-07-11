@@ -36,6 +36,8 @@ month          1 2 3 4 5 6 7 8 9 10 11 12
 day of week    1 2 3 4 5
 command        /usr/bin/find
 ```
+### Meaning
+“At every 15th minute past hour 0 on day-of-month 1 and 15 and on every day-of-week from Monday through Friday.”
 
 ## Code details
 
