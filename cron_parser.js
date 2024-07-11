@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const MIN_MINUTE_VALUE = 0
 const MAX_MINUTE_VALUE = 59
 
