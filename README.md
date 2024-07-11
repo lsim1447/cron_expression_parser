@@ -38,6 +38,9 @@ command        /usr/bin/find
 ```
 ### Meaning
 “At every 15th minute past hour 0 on day-of-month 1 and 15 and on every day-of-week from Monday through Friday.”
+or more clearly
+"Every 15 minutes, between 12:00 AM and 12:59 AM, on day 1 and 15 of the month, Monday through Friday"
+
 
 ## Code details
 
@@ -51,3 +54,8 @@ It handles:
 
 ### parseCronExpression(cronExpression)
 This function parses a cron string and expands each field to show the times at which it will run.
+
+## Learn more:
+- https://www.baeldung.com/cron-expressions
+- https://www.freeformatter.com/cron-expression-generator-quartz.html
+- https://crontab.cronhub.io/
